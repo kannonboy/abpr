@@ -5,6 +5,7 @@ var federalTransportTax = .025;
 
 function calculateAirfare(baseFare) {
     var fare = baseFare;                
+    fare += customsFee; // This should conflict.
     fare += immigrationFee;
     fare *= (1 + federalTransportTax);
     return fare;
